@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Library's Bookshelf</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="head_bar">
+        <h1 class="head_bar_title" style="text-align:center">National Library's Bookshelf</h1>
+    </header>
+
+    <main>
+        <section class="input_section card">
+            <h2>Masukkan Buku Baru</h2>
+                <form id="inputBook">
+                    <div class="input">
+                        <label for="Title">Judul</label>
+                        <input id="title" type="text" required>
+                    </div>
+                    <div class="input">
+                        <label for="Author">Penulis</label>
+                        <input id="author" type="text" required>
+                    </div>
+                    <div class="input">
+                        <label for="Year">Tahun</label>
+                        <input id="year" type="number" required>
+                    </div>
+                    <div class="input_inline">
+                        <label for="IsComplete">Selesai Dibaca</label>
+                            <input id="isComplete" type="checkbox">
+                    </div>
+                    <button id="bookSubmit" type="submit">Masukkan Buku Ke Rak <span>Belum Selesai Dibaca</span></button>
+                </form>
+        </section>
+        <section class="search_section card">
+            <div align="center" style="margin:5px"><h2>Cari Buku</h2><br><h5 id="result"></h5></div>
+            
+            <form id="searchBook">
+                <div class="input"  style="width:100%;border:1px;height:90px">
+                    <label for="searchTitle">Judul&nbsp;&nbsp;</label>
+                    <input id="searchTitle" type="text" size="50" style="width:90%">
+                   
+                    <p style="text-align:right;width:100%"><button id="refresh" type="submit">Refresh</button><button id="searchSubmit" type="submit" style="margin:3px;">        Cari     </button>
+                   </p>
+                </div>
+              
+            </form>
+        </section>   
+    
+        <section class="book_shelf card">
+            <h2>Belum Selesai Dibaca</h2>
+
+            <div id="UnfixedBookshelfList" class="book_list">
+               
+            </div>
+        </section>
+
+        <section class="book_shelf card">
+            <h2>Selesai Dibaca</h2>
+
+            <div id="FixedBookshelfList" class="book_list">
+               
+            </div>
+        </section>
+    </main>
+
+    <footer>2021 &copy; Woro Retnoningsih - National Library's Bookshelf</footer>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/dom.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
